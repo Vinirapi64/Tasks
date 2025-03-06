@@ -2,16 +2,14 @@
 Um sistema de gerenciamento de tarefas desenvolvido com HTML, CSS e JavaScript. O projeto permite criar, listar, editar e excluir tarefas, além de alterar seu status (Pendente, Em andamento, Concluído). Todas as tarefas são salvas no localStorage, garantindo que os dados persistam mesmo após o fechamento do navegador.
 
 🚀 Funcionalidades
-Criação de Tarefas:
-
+Criação de Tarefas
 Adicione novas tarefas com título e descrição.
 
 Limite de 300 caracteres para a descrição.
 
 Status padrão: "Pendente".
 
-Listagem de Tarefas:
-
+Listagem de Tarefas
 Visualize todas as tarefas em cards coloridos, com cores correspondentes ao status:
 
 🔴 Pendente: Vermelho.
@@ -20,20 +18,16 @@ Visualize todas as tarefas em cards coloridos, com cores correspondentes ao stat
 
 🟢 Concluído: Verde.
 
-Edição de Tarefas:
-
+Edição de Tarefas
 Altere o título e a descrição de uma tarefa existente.
 
-Alteração de Status:
-
+Alteração de Status
 Mude o status da tarefa entre "Pendente", "Em andamento" e "Concluído".
 
-Exclusão de Tarefas:
-
+Exclusão de Tarefas
 Remova tarefas da lista.
 
-Persistência de Dados:
-
+Persistência de Dados
 Todas as tarefas são salvas no localStorage, garantindo que os dados não sejam perdidos ao recarregar a página.
 
 🛠️ Tecnologias Utilizadas
@@ -86,25 +80,21 @@ Cores Dinâmicas: As cores dos cards mudam conforme o status da tarefa.
 Animações: Transições suaves ao alternar entre seções (criação, listagem e edição de tarefas).
 
 📂 Estrutura do Projeto
-HTML:
-
+HTML
 index.html: Página inicial com menu de navegação.
 
 create.html: Página para criar novas tarefas.
 
 task_list.html: Página para listar todas as tarefas.
 
-CSS:
-
+CSS
 style.css: Estilos globais e animações.
 
-JavaScript:
-
+JavaScript
 script.js: Lógica principal do sistema, incluindo a manipulação do DOM e o gerenciamento do estado das tarefas.
 
 🖥️ Como Executar o Projeto
-Deploy: https://tasks-one-pi.vercel.app/task_list.html
-
+Deploy: Tasks System
 Navegue pelo sistema usando o menu:
 
 Home: Página inicial.
@@ -114,28 +104,24 @@ Criar Tarefa: Adicione novas tarefas.
 Listar Tarefas: Visualize e gerencie suas tarefas.
 
 📝 Exemplo de Uso
-Criar uma Tarefa:
-
+1. Criar uma Tarefa
 Acesse a página "Criar Tarefa".
 
 Preencha o título e a descrição.
 
 Clique em "Adicionar Tarefa".
 
-Alterar o Status:
-
+2. Alterar o Status
 Na lista de tarefas, clique em "Acessar Tarefa".
 
 Altere o status usando os checkboxes e clique em "Alterar Status".
 
-Editar uma Tarefa:
-
+3. Editar uma Tarefa
 Na lista de tarefas, clique em "Acessar Tarefa".
 
 Clique em "Alterar" para editar o título e a descrição.
 
-Excluir uma Tarefa:
-
+4. Excluir uma Tarefa
 Na lista de tarefas, clique em "Acessar Tarefa".
 
 Clique em "Remover Tarefa".
