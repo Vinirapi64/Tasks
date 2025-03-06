@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatVini</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body onload="listTask()">
+    <header class="area-menu">
+        <h1>Tasks</h1>
+        <nav class="menu-opcoes">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="create.html">Criar tarefa</a></li>
+                <li><a href="task_list.html">Listar tarefas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-area">
+        <section class="card-area" id="card-area" >
+            <!-- Os cards serão inseridos aqui pelo JavaScript -->
+        </section>
+
+        <section class="task-view" id="task-view" >
+            <article class="card-official" id="card-official">
+                <h2 class="title-select-official"></h2>
+                <p class="description-select-official"></p>
+                <div class="remove-return">
+                    <div class="buttons-left">
+                        <button class="return-list-tasks" id="return-list-tasks">p</button>
+                        <button class="change-task" id="change-task"></button>
+                    </div>
+                    <h2 class="status-create-official">Status: </h2>
+                    <div class="Buttons-right">
+                        <button class="remove-task" id="remove-task"></button>
+                        <button class="modify-status" id="modify-status"></button>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="change-task-article" id="change-task-article">
+
+            </article>
+        </section>
+
+        <section class="modify-status-section" id="modify-status-section">
+            <article class="modify-status-card">
+                <h1 class="title-modify-status"></h1>
+                <div class="select-status-task">
+                    <div class="status">
+                        <input type="checkbox" id="pending" class="pending">
+                        <svg viewBox="0 0 35.6 35.6">
+                        <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+                        <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+                        <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+                        </svg>
+                    </div>
+                    <p>Pendente</p>
+                </div>
+
+                <div class="select-status-task">
+                    <div class="status">
+                        <input type="checkbox" id="in-progress" class="in-progress">
+                        <svg viewBox="0 0 35.6 35.6">
+                        <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+                        <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+                        <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+                        </svg>
+                    </div>
+                    <p>Em andamento</p>
+                </div>
+
+                <div class="select-status-task">
+                    <div class="status">
+                        <input type="checkbox" id="completed" class="completed" >
+                        <svg viewBox="0 0 35.6 35.6">
+                        <circle class="background" cx="17.8" cy="17.8" r="17.8"></circle>
+                        <circle class="stroke" cx="17.8" cy="17.8" r="14.37"></circle>
+                        <polyline class="check" points="11.78 18.12 15.55 22.23 25.17 12.87"></polyline>
+                        </svg>
+                    </div>
+                    <p>Concluido</p>
+                </div>
+                <button class="change-status" id="change-status"></button>
+            </article>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

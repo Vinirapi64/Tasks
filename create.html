@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatVini</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="area-menu">
+        <h1>Tasks</h1>
+        <nav class="menu-opcoes">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="create.html">Criar tarefa</a></li>
+                <li><a href="task_list.html">Listar tarefas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-area">
+        <section class="task-create" id="task-create">
+            <h1 class="main-h1-create">Crie uma nova tarefa</h1>
+            <div class="title-task">
+                <h1>Titulo: </h1>
+                <input class="button-create-task" type="text" id="title-text" >
+            </div>
+            <div class="description">
+                <h1>Descrição: </h1>
+                <textarea class="description-task" name="description-task" id="description-task"></textarea>
+                <button onclick="saveTask()">Adicionar tarefa</button>
+            </div>
+        </section>
+
+        <section class="task-create02" id="task-create02" >
+            <h1>Tarefa criada!</h1>
+            <div><h2 class="title-create-official"></h2></div>
+            <div><p class="description-create-official"></p></div>
+            <div><h2 class="status-create-official">Status: </h2></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

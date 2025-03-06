@@ -1,0 +1,562 @@
+
+:root {
+    --radius-default: .5rem;
+    --gap-default: 1rem;
+    --main-color: rgb(93, 125, 173);
+    --body-color-default: rgb(32, 27, 27);
+}
+.image-task{
+    width: 30rem;
+    animation: image 3s linear .3s infinite alternate;
+}
+
+body {
+    background-image: linear-gradient(rgb(116, 116, 151), rgb(198, 207, 231), rgb(87, 87, 172));
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.title-index{
+    text-shadow: 1px 1px 2px black;
+    width: 20rem;
+    margin-left: 2rem;
+    font-size: 3rem;
+}
+.area-menu {
+    width: 14rem;
+    background-image: linear-gradient(rgb(136, 156, 194), rgb(25, 26, 58));
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed; /* Fixa o menu */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border: solid 1px black;
+}
+
+.area-menu h1 {
+    color: black;
+    margin-top: 2rem;
+}
+
+.menu-opcoes ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    gap: var(--gap-default);
+}
+
+.menu-opcoes li {
+    list-style-type: none;
+}
+
+.menu-opcoes li a {
+    text-decoration: none;
+    color: black;
+    text-shadow: 0px 0px 1px black;
+
+}
+
+.main-area {
+    display: flex;
+    justify-content: space-around; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    width: calc(100% - 14rem); /* Subtrai a largura do menu */
+    margin-left: 14rem; /* Desloca o conteúdo para a direita, igual à largura do menu */
+    min-height: 100vh; /* Altura mínima da tela */
+    padding: var(--gap-default); /* Adiciona um espaçamento interno */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+    animation: slide 1s alternate; 
+}
+
+#task-create {
+    width: 50rem;
+    background-color: #f8f6f4;
+    padding: var(--gap-default);
+    border-radius: var(--radius-default);
+    border: solid black 2px;
+    box-shadow: 3px 4px 5px rgb(0, 0, 0);
+}
+
+.main-h1-create {
+    color: black;
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.title-task {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-default);
+    margin: 0;
+}
+
+.title-task h1 {
+    color: black;
+    font-size: 1rem;
+}
+
+.title-task input {
+    width: 100%;
+    height: 1.8rem;
+    border-radius: var(--radius-default);
+}
+
+.description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: .3rem;
+}
+
+.description h1 {
+    color: black;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.description textarea {
+    height: 6rem;
+    width: 100%;
+    border-radius: var(--radius-default);
+}
+
+.description button {
+    height: 2.5rem;
+    width: 7rem;
+    border-radius: var(--radius-default);
+    cursor: pointer;
+    background-color: var(--body-color-default);
+    color: white;
+    border: solid 2px black;
+}
+
+
+.task-create02 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50rem;
+    background-color: #FF6347;
+    padding: var(--gap-default);
+    border-radius: var(--radius-default);
+    border: solid black 2px;
+    box-shadow: 3px 4px 5px rgb(0, 0, 0);
+    display: none;
+    overflow-wrap: anywhere ; /* Adiciona uma barra de rolagem vertical quando o conteúdo ultrapassar a altura */
+    overflow-y: auto;
+}
+.status-create-official{
+    text-align: center;
+    color: black;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.task-create02 h1 {
+    text-align: center;
+    color: black;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.title-create-official {
+    color: black;
+    font-size: 1rem;
+    width: 98%;
+    border-radius: var(--radius-default);
+    background-color: white;
+    text-align: center;
+    padding: .5rem;
+}
+
+.description-create-official {
+    color: black;
+    font-size: 1rem;
+    height: 6rem; /* Altura fixa do contêiner */
+    width: 98%;
+    border-radius: var(--radius-default);
+    background-color: white;
+    padding: .5rem;
+    display: flex;
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando o conteúdo ultrapassar a altura */
+}
+
+.task-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    flex: 1 1 calc(25% - var(--gap-default)); /* Ajusta o tamanho dos cards */
+    max-width: calc(25% - var(--gap-default)); /* Limita o tamanho máximo */
+    height: 7rem;
+    background-color: var(--main-color);
+    padding: var(--gap-default);
+    border-radius: var(--radius-default);
+    border: solid black 1px;
+    box-shadow: 3px 4px 5px rgb(0, 0, 0);
+    margin-bottom: var(--gap-default); /* Adiciona margem inferior para espaçamento */
+}
+.card-area{
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+    gap: var(--gap-default); /* Espaçamento entre os cards */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    align-content: flex-start; /* Alinha as linhas no topo */
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 1200px; /* Define uma largura máxima para o conteúdo */
+    margin: 0 auto; /* Centraliza o .card-area no .main-area */
+    padding: var(--gap-default); /* Adiciona um espaçamento interno */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+.name-title{
+    display: none;
+}
+.select-card{
+    background-color: blue;
+}
+.button-card{
+    height: 2.5rem;
+    width: 7rem;
+    border-radius: var(--radius-default);
+    cursor: pointer;
+    background-color: var(--body-color-default);
+    color: white;
+    border: solid 1px black;
+}
+.card-official{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50rem;
+    background-color: var(--main-color);
+    padding: var(--gap-default);
+    border-radius: var(--radius-default);
+    border: solid 1px black;
+    box-shadow: 3px 4px 5px rgb(0, 0, 0);
+    display: none;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-top: var(--gap-default); /* Adiciona espaçamento superior */
+}
+
+.div-title{
+    display: flex;
+    align-items: center;
+    gap: var(--gap-default);
+    margin: 0;
+}
+.title-change{
+    color: black;
+    font-size: 1rem;
+}
+.title-change-input{
+    height: 2rem;
+    border-radius: var(--radius-default);
+    width: 100%;
+}
+.div-descripition{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: .3rem;
+}
+.description-change{
+    color: black;
+    font-size: 1rem;
+    margin: 0;
+}
+.description-text-area{
+    height: 6rem;
+    width: 100%;
+    border-radius: var(--radius-default);
+    margin-bottom: var(--gap-default);
+}
+.title-select-official{
+    color: black;
+    font-size: 1rem;
+    width: 98%;
+    border-radius: var(--radius-default);
+    background-color: white;
+    text-align: center;
+    padding: .5rem;
+    border: solid 2px black;
+}
+.description-select-official{
+    color: black;
+    font-size: 1rem;
+    height: 6rem; /* Altura fixa do contêiner */
+    width: 98%;
+    border-radius: var(--radius-default);
+    background-color: white;
+    padding: .5rem;
+    display: flex; 
+    overflow-wrap: anywhere ; /* Adiciona uma barra de rolagem vertical quando o conteúdo ultrapassar a altura */
+    overflow-y: auto;
+    border: solid 2px black;
+}
+.remove-return{
+    display: flex;
+    justify-content: space-between;
+}
+.buttons-left{
+    display: flex;
+    gap: var(--gap-default);
+}
+.Buttons-right{
+    display: flex;
+    gap: var(--gap-default);
+}
+.remove-task{
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: var(--radius-default);
+    cursor: pointer;
+    background-color: var(--body-color-default);
+    color: white;
+    border: solid 2px black;
+    box-shadow:1px 1px 2px black;
+}
+.return-list-tasks{
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: var(--radius-default);
+    cursor: pointer;
+    background-color: var(--body-color-default);
+    color: white;
+    border: solid 2px black;
+    box-shadow:1px 1px 2px black;
+}
+.modify-status{
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: var(--radius-default);
+    cursor: pointer;
+    background-color: var(--body-color-default);
+    color: white;
+    border: solid 2px black;
+    box-shadow:1px 1px 2px black;
+}
+.modify-status-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20rem; /* Ajusta a largura para ser igual ao task-view */
+    background-color: var(--main-color);
+    padding: var(--gap-default);
+    border-radius: var(--radius-default);
+    border: solid black 2px;
+    box-shadow: 3px 4px 5px rgb(0, 0, 0);
+    display: none;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-top: var(--gap-default); /* Adiciona espaçamento superior */
+}
+.title-modify-status{
+    color: black;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.select-status-task{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap-default);
+}
+.select-status-task p{
+    color: black;
+}
+.modify-status-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: var(--gap-default);
+}
+.remove-return{
+    display: flex;
+    align-items: center;
+}
+.change-status{
+    height: 2.5rem;
+    width: 7rem;
+    border-radius: var(--radius-default);
+    cursor: pointer;
+    background-color: var(--body-color-default);
+    color: white;
+    border: solid 2px black;
+    margin-top: var(--gap-default);
+}
+
+.change-task{
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: var(--radius-default);
+    cursor: pointer;
+    background-color: var(--body-color-default);
+    color: white;
+    border: solid 2px black;
+    box-shadow:1px 1px 2px black;
+}
+
+.status:hover .check {
+    stroke-dashoffset: 0;
+  }
+
+  .status {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+  }
+  .status .background {
+    fill: #ccc;
+    transition: ease all 0.6s;
+    -webkit-transition: ease all 0.6s;
+  }
+  .status .stroke {
+    fill: none;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    stroke-width: 2px;
+    stroke-dashoffset: 100;
+    stroke-dasharray: 100;
+    transition: ease all 0.6s;
+    -webkit-transition: ease all 0.6s;
+  }
+  .status .check {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    stroke-dashoffset: 22;
+    stroke-dasharray: 22;
+    transition: ease all 0.6s;
+    -webkit-transition: ease all 0.6s;
+  }
+  .status input[type=checkbox] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 0;
+    opacity: 0;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .status input[type=checkbox]:hover {
+    cursor: pointer;
+  }
+  .status input[type=checkbox]:checked + svg .background {
+    fill: #6cbe45;
+  }
+  .status input[type=checkbox]:checked + svg .stroke {
+    stroke-dashoffset: 0;
+  }
+  .status input[type=checkbox]:checked + svg .check {
+    stroke-dashoffset: 0;
+  }
+  
+.title-list-card{
+    color: black;
+}
+@keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+@keyframes image {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: scale(85%);
+    }
+    100%{
+        transform: translateX(15%);
+    }
+}
+.slide-animation {
+    animation: slide 1s ease-in-out; /* Ajuste a duração e o timing conforme necessário */
+}
+.change-task-article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50rem;
+    background-color: var(--main-color);
+    padding: var(--gap-default);
+    border-radius: var(--radius-default);
+    border: solid 1px black;
+    box-shadow: 3px 4px 5px rgb(0, 0, 0);
+    display: none;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-top: var(--gap-default); /* Adiciona espaçamento superior */
+}
+.title-change-article{
+    text-align: center;
+    margin: .5rem;
+}
+.title-change-div{
+    display: flex;
+    align-items: center;
+    gap: var(--gap-default);
+    margin: 0;
+}
+.description-change-div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+.title-change-h1{
+    color: black;
+    font-size: 1rem;
+    margin: 0;
+    width: 6.5rem;
+}
+.title-change-input{
+    width: 100%;
+    height: 1.8rem;
+    border-radius: var(--radius-default);
+    margin: 0;
+}
+.descripition-change-h1{
+    color: black;
+    font-size: 1rem;
+    margin: 0;
+}
+.description-change-text{
+    height: 6rem;
+    width: 100%;
+    border-radius: var(--radius-default);
+    margin: 0;
+}
+.button-change-task{
+    height: 2.5rem;
+    width: 7rem;
+    border-radius: var(--radius-default);
+    cursor: pointer;
+    background-color: var(--body-color-default);
+    color: white;
+    border: solid 2px black;
+    margin-top: var(--gap-default);
+}
+::placeholder{
+    color: black;
+}
