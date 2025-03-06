@@ -127,4 +127,4 @@ Navegue pelo sistema usando o menu:
 ---
 
 
-Feito com ❤️ por [Seu Nome](https://github.com/seu-usuario). 🚀
+Feito com ❤️ por [Vinicius MP](https://github.com/Vinirapi64). 🚀
