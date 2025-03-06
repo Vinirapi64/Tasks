@@ -1,127 +1,130 @@
-📋 Sistema de Gerenciamento de Tarefas (Tasks)
-Um sistema de gerenciamento de tarefas desenvolvido com HTML, CSS e JavaScript. O projeto permite criar, listar, editar e excluir tarefas, além de alterar seu status (Pendente, Em andamento, Concluído). Todas as tarefas são salvas no localStorage, garantindo que os dados persistam mesmo após o fechamento do navegador.
+# 📋 Sistema de Gerenciamento de Tarefas (Tasks)
 
-🚀 Funcionalidades
-Criação de Tarefas
-Adicione novas tarefas com título e descrição.
+Um sistema de gerenciamento de tarefas desenvolvido com **HTML**, **CSS** e **JavaScript**. O projeto permite **criar**, **listar**, **editar** e **excluir** tarefas, além de **alterar seu status** (Pendente, Em andamento, Concluído). Todas as tarefas são salvas no **`localStorage`**, garantindo que os dados persistam mesmo após o fechamento do navegador.
 
-Limite de 300 caracteres para a descrição.
+---
 
-Status padrão: "Pendente".
+## 🚀 Funcionalidades
 
-Listagem de Tarefas
-Visualize todas as tarefas em cards coloridos, com cores correspondentes ao status:
+### **Criação de Tarefas**
+- Adicione novas tarefas com **título** e **descrição**.
+- Limite de **300 caracteres** para a descrição.
+- Status padrão: **"Pendente"**.
 
-🔴 Pendente: Vermelho.
+### **Listagem de Tarefas**
+- Visualize todas as tarefas em **cards coloridos**, com cores correspondentes ao status:
+  - 🔴 **Pendente**: Vermelho.
+  - 🔵 **Em andamento**: Azul.
+  - 🟢 **Concluído**: Verde.
 
-🔵 Em andamento: Azul.
+### **Edição de Tarefas**
+- Altere o **título** e a **descrição** de uma tarefa existente.
 
-🟢 Concluído: Verde.
+### **Alteração de Status**
+- Mude o status da tarefa entre **"Pendente"**, **"Em andamento"** e **"Concluído"**.
 
-Edição de Tarefas
-Altere o título e a descrição de uma tarefa existente.
+### **Exclusão de Tarefas**
+- Remova tarefas da lista.
 
-Alteração de Status
-Mude o status da tarefa entre "Pendente", "Em andamento" e "Concluído".
+### **Persistência de Dados**
+- Todas as tarefas são salvas no **`localStorage`**, garantindo que os dados não sejam perdidos ao recarregar a página.
 
-Exclusão de Tarefas
-Remova tarefas da lista.
+---
 
-Persistência de Dados
-Todas as tarefas são salvas no localStorage, garantindo que os dados não sejam perdidos ao recarregar a página.
+## 🛠️ Tecnologias Utilizadas
 
-🛠️ Tecnologias Utilizadas
-HTML: Estruturação da interface do usuário.
+- **HTML**: Estruturação da interface do usuário.
+- **CSS**: Estilização e animações (como a animação de slide ao abrir a lista de tarefas).
+- **JavaScript**:
+  - Manipulação do DOM para **renderização dinâmica** das tarefas.
+  - Gerenciamento do estado das tarefas (**criação**, **edição**, **exclusão** e **alteração de status**).
+  - Uso do **`localStorage`** para persistência de dados.
+  - Lógica complexa para garantir a **atualização imediata da interface** após cada ação.
 
-CSS: Estilização e animações (como a animação de slide ao abrir a lista de tarefas).
+---
 
-JavaScript:
+## 🧠 Destaques do JavaScript
 
-Manipulação do DOM para renderização dinâmica das tarefas.
+O **JavaScript** foi a parte mais complexa e poderosa do sistema. Aqui estão alguns dos principais pontos:
 
-Gerenciamento do estado das tarefas (criação, edição, exclusão e alteração de status).
+### **1. Classes e Gerenciamento de Estado**
+- **Classe `Task`**: Representa uma tarefa com propriedades como **`title`**, **`description`** e **`status`**.
+- **Classe `Activities`**: Gerencia a lista de tarefas e todas as operações relacionadas (**adicionar**, **editar**, **excluir**, **alterar status**).
 
-Uso do localStorage para persistência de dados.
+### **2. Manipulação do DOM**
+- **Renderização Dinâmica**: As tarefas são renderizadas dinamicamente no DOM usando JavaScript. Cada tarefa é representada por um **card**, criado com base no estado atual das tarefas.
+- **Atualização em Tempo Real**: Após qualquer alteração (**criação**, **edição**, **exclusão** ou **mudança de status**), a interface é atualizada imediatamente sem a necessidade de recarregar a página.
 
-Lógica complexa para garantir a atualização imediata da interface após cada ação.
+### **3. Persistência com `localStorage`**
+- Todas as tarefas são salvas no **`localStorage`** como uma string JSON. Quando a página é carregada, as tarefas são recuperadas e renderizadas novamente.
 
-🧠 Destaques do JavaScript
-O JavaScript foi a parte mais complexa e poderosa do sistema. Aqui estão alguns dos principais pontos:
+### **4. Lógica de Atualização de Status**
+- O status de uma tarefa pode ser alterado entre **"Pendente"**, **"Em andamento"** e **"Concluído"**. A cor do card é atualizada dinamicamente com base no status selecionado.
 
-1. Classes e Gerenciamento de Estado
-Classe Task: Representa uma tarefa com propriedades como title, description e status.
+### **5. Event Listeners**
+- Foram utilizados **`event listeners`** para capturar interações do usuário, como cliques em botões e alterações em checkboxes.
 
-Classe Activities: Gerencia a lista de tarefas e todas as operações relacionadas (adicionar, editar, excluir, alterar status).
+### **6. Validações e Feedback**
+- O sistema valida se o **título da tarefa** foi preenchido antes de salvar.
+- **Feedback visual** é fornecido ao usuário, como a mudança de cor do card ao alterar o status.
 
-2. Manipulação do DOM
-Renderização Dinâmica: As tarefas são renderizadas dinamicamente no DOM usando JavaScript. Cada tarefa é representada por um card, criado com base no estado atual das tarefas.
+---
 
-Atualização em Tempo Real: Após qualquer alteração (criação, edição, exclusão ou mudança de status), a interface é atualizada imediatamente sem a necessidade de recarregar a página.
+## 🎨 Design e Interface
 
-3. Persistência com localStorage
-Todas as tarefas são salvas no localStorage como uma string JSON. Quando a página é carregada, as tarefas são recuperadas e renderizadas novamente.
+- **Interface Moderna**: Design limpo e responsivo, com **cards coloridos** e **animações suaves**.
+- **Cores Dinâmicas**: As cores dos cards mudam conforme o status da tarefa.
+- **Animações**: Transições suaves ao alternar entre seções (**criação**, **listagem** e **edição de tarefas**).
 
-4. Lógica de Atualização de Status
-O status de uma tarefa pode ser alterado entre "Pendente", "Em andamento" e "Concluído". A cor do card é atualizada dinamicamente com base no status selecionado.
+---
 
-5. Event Listeners
-Foram utilizados event listeners para capturar interações do usuário, como cliques em botões e alterações em checkboxes.
+## 📂 Estrutura do Projeto
 
-6. Validações e Feedback
-O sistema valida se o título da tarefa foi preenchido antes de salvar.
+### **HTML**
+- **`index.html`**: Página inicial com menu de navegação.
+- **`create.html`**: Página para criar novas tarefas.
+- **`task_list.html`**: Página para listar todas as tarefas.
 
-Feedback visual é fornecido ao usuário, como a mudança de cor do card ao alterar o status.
+### **CSS**
+- **`style.css`**: Estilos globais e animações.
 
-🎨 Design e Interface
-Interface Moderna: Design limpo e responsivo, com cards coloridos e animações suaves.
+### **JavaScript**
+- **`script.js`**: Lógica principal do sistema, incluindo a manipulação do DOM e o gerenciamento do estado das tarefas.
 
-Cores Dinâmicas: As cores dos cards mudam conforme o status da tarefa.
+---
 
-Animações: Transições suaves ao alternar entre seções (criação, listagem e edição de tarefas).
+## 🖥️ Como Executar o Projeto
 
-📂 Estrutura do Projeto
-HTML
-index.html: Página inicial com menu de navegação.
+### **Deploy**: [Tasks System](https://tasks-one-pi.vercel.app/task_list.html)
 
-create.html: Página para criar novas tarefas.
-
-task_list.html: Página para listar todas as tarefas.
-
-CSS
-style.css: Estilos globais e animações.
-
-JavaScript
-script.js: Lógica principal do sistema, incluindo a manipulação do DOM e o gerenciamento do estado das tarefas.
-
-🖥️ Como Executar o Projeto
-Deploy: Tasks System
 Navegue pelo sistema usando o menu:
+- **Home**: Página inicial.
+- **Criar Tarefa**: Adicione novas tarefas.
+- **Listar Tarefas**: Visualize e gerencie suas tarefas.
 
-Home: Página inicial.
+---
 
-Criar Tarefa: Adicione novas tarefas.
+## 📝 Exemplo de Uso
 
-Listar Tarefas: Visualize e gerencie suas tarefas.
+### **1. Criar uma Tarefa**
+1. Acesse a página **"Criar Tarefa"**.
+2. Preencha o **título** e a **descrição**.
+3. Clique em **"Adicionar Tarefa"**.
 
-📝 Exemplo de Uso
-1. Criar uma Tarefa
-Acesse a página "Criar Tarefa".
+### **2. Alterar o Status**
+1. Na lista de tarefas, clique em **"Acessar Tarefa"**.
+2. Altere o status usando os **checkboxes**.
+3. Clique em **"Alterar Status"**.
 
-Preencha o título e a descrição.
+### **3. Editar uma Tarefa**
+1. Na lista de tarefas, clique em **"Acessar Tarefa"**.
+2. Clique em **"Alterar"** para editar o **título** e a **descrição**.
 
-Clique em "Adicionar Tarefa".
+### **4. Excluir uma Tarefa**
+1. Na lista de tarefas, clique em **"Acessar Tarefa"**.
+2. Clique em **"Remover Tarefa"**.
 
-2. Alterar o Status
-Na lista de tarefas, clique em "Acessar Tarefa".
+---
 
-Altere o status usando os checkboxes e clique em "Alterar Status".
 
-3. Editar uma Tarefa
-Na lista de tarefas, clique em "Acessar Tarefa".
-
-Clique em "Alterar" para editar o título e a descrição.
-
-4. Excluir uma Tarefa
-Na lista de tarefas, clique em "Acessar Tarefa".
-
-Clique em "Remover Tarefa".
+Feito com ❤️ por [Seu Nome](https://github.com/seu-usuario). 🚀
