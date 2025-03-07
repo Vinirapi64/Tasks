@@ -492,7 +492,7 @@ body {
 .slide-animation {
     animation: slide 1s ease-in-out; /* Ajuste a duração e o timing conforme necessário */
 }
-.change-task-article{
+.change-task-article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -505,49 +505,64 @@ body {
     box-shadow: 3px 4px 5px rgb(0, 0, 0);
     display: none;
     margin: 0 auto; /* Centraliza horizontalmente */
-    margin-top: var(--gap-default); /* Adiciona espaçamento superior */
+    margin-top: 0; /* Remove a margem superior */
 }
-.title-change-article{
+
+.title-change-article {
     text-align: center;
-    margin: .5rem;
+    margin: 0; /* Remove a margem */
+    padding: 0; /* Remove o padding */
 }
-.title-change-div{
+
+.title-change-div {
     display: flex;
     align-items: center;
     gap: var(--gap-default);
-    margin: 0;
+    margin: 0; /* Remove a margem */
+    padding: 0; /* Remove o padding */
 }
-.description-change-div{
+
+.description-change-div {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin: 0;
+    margin: 0; /* Remove a margem */
+    padding: 0; /* Remove o padding */
 }
-.title-change-h1{
+
+.title-change-h1 {
     color: black;
     font-size: 1rem;
-    margin: 0;
+    margin: .4rem;
+    padding: 0; /* Remove o padding */
     width: 6.5rem;
 }
-.title-change-input{
+
+.title-change-input {
     width: 100%;
     height: 1.8rem;
     border-radius: var(--radius-default);
-    margin: 0;
+    margin: 0; /* Remove a margem */
+    padding: 0; /* Remove o padding */
 }
-.descripition-change-h1{
+
+.description-change-h1 {
     color: black;
     font-size: 1rem;
-    margin: 0;
+    margin: .2rem;
+    padding: 0; /* Remove o padding */
 }
-.description-change-text{
+
+.description-change-text {
     height: 6rem;
     width: 100%;
     border-radius: var(--radius-default);
-    margin: 0;
+    margin: .2rem;
+    padding: 0; /* Remove o padding */
 }
-.button-change-task{
+
+.button-change-task {
     height: 2.5rem;
     width: 7rem;
     border-radius: var(--radius-default);
@@ -555,8 +570,9 @@ body {
     background-color: var(--body-color-default);
     color: white;
     border: solid 2px black;
-    margin-top: var(--gap-default);
+    margin: .4rem;
 }
-::placeholder{
+
+::placeholder {
     color: black;
 }
